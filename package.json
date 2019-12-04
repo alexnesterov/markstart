@@ -4,8 +4,8 @@
   "description": "WebStart Frontend Template, based on ZURB WebApp Template.",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build --production"
+    "dev": "gulp",
+    "prod": "gulp build --production"
   },
   "author": "Alex Nesterov",
   "license": "MIT",
