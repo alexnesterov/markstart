@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import priorityNav from 'priority-nav';
+// import priorityNav from 'priority-nav';
 
 // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -12,12 +12,12 @@ window.jQuery = $;
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-var nav = priorityNav.init({
-  navDropdownClassName: 'header__nav-dropdown',
-  navDropdownToggleClassName: 'header__nav-dropdown-toggle',
-  navDropdownLabel: 'Ещё',
-  breakPoint: '768',
-  navDropdownBreakpointLabel: 'Меню'
-});
+// var nav = priorityNav.init({
+//   navDropdownClassName: 'header__nav-dropdown',
+//   navDropdownToggleClassName: 'header__nav-dropdown-toggle',
+//   navDropdownLabel: 'Ещё',
+//   breakPoint: '768',
+//   navDropdownBreakpointLabel: 'Меню'
+// });
 
 console.log('Ready!');
