@@ -14,6 +14,8 @@ import named         from 'vinyl-named';
 import uncss         from 'uncss';
 import autoprefixer  from 'autoprefixer';
 
+const path = require('path');
+
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
@@ -94,24 +96,52 @@ function sass() {
     .pipe(browser.reload({ stream: true }));
 }
 
+
 let webpackConfig = {
-  mode: (PRODUCTION ? 'production' : 'development'),
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [ "@babel/preset-env" ],
-            compact: false
-          }
-        }
-      }
-    ]
-  },
-  devtool: !PRODUCTION && 'source-map'
-}
+	mode: PRODUCTION ? 'production' : 'development',
+	output: {
+		publicPath: 'theme/assets/scripts/',
+		path: path.resolve(__dirname, 'theme/assets/scripts'),
+	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/](jquery|js-cookie)[\\/]/,
+					name: 'vendors',
+					chunks: 'all',
+				}
+			},
+			// name: 'libs',
+			// chunks: 'all',
+		},
+	},
+	plugins: [
+		new webpack2.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			Cookies: 'js-cookie',
+		})
+	],
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+						compact: false,
+					},
+				},
+			},
+		],
+	},
+	// externals: {
+	// 	jquery: 'jQuery',
+	// },
+	devtool: !PRODUCTION && 'source-map',
+};
 
 // Combine JavaScript into one file
 // In production, the file is minified

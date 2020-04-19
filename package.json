@@ -10,7 +10,8 @@
   "author": "Alex Nesterov",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "js-cookie": "^2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
