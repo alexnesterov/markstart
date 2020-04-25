@@ -1,7 +1,7 @@
 .header {
 
-  &__inner {
-    @extend %container;
-    position: relative;
-  }
+	&__inner {
+		@extend %container;
+		position: relative;
+	}
 }

@@ -15,7 +15,7 @@ window.windowScroll = 0;
 window.windowLastScroll = 0;
 
 $window.on('load', function() {
-  $body.addClass('page_loaded');
+	$body.addClass('page_loaded');
 });
 
 // If you want to pick and choose which modules to include, comment out the above and uncomment
