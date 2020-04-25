@@ -1,4 +1,4 @@
-# WebStart Frontend Template
+# Surjed Frontend Template
 Based on [ZURB WebApp Template](https://github.com/zurb/foundation-zurb-template)
 
 Features:

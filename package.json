@@ -1,11 +1,11 @@
 {
-  "name": "webstart-frontend",
+  "name": "surjed",
   "version": "1.0.0",
-  "description": "WebStart Frontend Template, based on ZURB WebApp Template.",
+  "description": "Surjed based on ZURB WebApp Template.",
   "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "gulp",
-    "prod": "gulp build --production"
+    "build": "gulp build --production"
   },
   "author": "Alex Nesterov",
   "license": "MIT",
