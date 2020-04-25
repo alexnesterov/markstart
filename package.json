@@ -44,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexnesterov/webstart-frontend.git"
+    "url": "https://github.com/alexnesterov/surjed.git"
   },
   "bugs": {
-    "url": "https://github.com/alexnesterov/webstart-frontend/issues"
+    "url": "https://github.com/alexnesterov/surjed/issues"
   },
   "private": true
 }
