@@ -107,8 +107,8 @@ let webpackConfig = {
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
-					test: /[\\/]node_modules[\\/](jquery|js-cookie)[\\/]/,
-					name: 'vendors',
+					test: /[\\/]node_modules[\\/](jquery|js-cookie|lodash)[\\/]/,
+					name: 'vendor',
 					chunks: 'all',
 				}
 			},
@@ -121,6 +121,7 @@ let webpackConfig = {
 			$: 'jquery',
 			jQuery: 'jquery',
 			Cookies: 'js-cookie',
+			_: 'lodash'
 		})
 	],
 	module: {
