@@ -65,6 +65,15 @@ function pages() {
 				helpers: 'src/helpers/',
 			})
 		)
+		.pipe(
+			$.htmlBeautify({
+				indent_with_tabs: true,
+				indent_size: 4,
+				max_preserve_newlines: 0,
+				end_with_newline: true,
+				extra_liners: [],
+			})
+		)
 		.pipe(gulp.dest(PATHS.dist));
 }
 
