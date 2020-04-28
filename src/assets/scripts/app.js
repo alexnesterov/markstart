@@ -14,7 +14,7 @@ window.windowWidth = $window.width();
 window.windowScroll = 0;
 window.windowLastScroll = 0;
 
-$window.on('load', function() {
+$window.on('load', function () {
 	$body.addClass('page_loaded');
 });
 

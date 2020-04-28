@@ -5,7 +5,8 @@
 	"main": "gulpfile.babel.js",
 	"scripts": {
 		"dev": "gulp",
-		"build": "gulp build --production"
+		"build": "gulp build --production",
+		"pretty": "prettier --write \"src/**/*.{js,json,md,scss}\""
 	},
 	"author": "Alex Nesterov",
 	"license": "MIT",
@@ -37,6 +38,7 @@
 		"gulp-uglify": "^3.0.2",
 		"js-yaml": "^3.13.1",
 		"panini": "^1.6.3",
+		"prettier": "2.0.5",
 		"rimraf": "^3.0.0",
 		"uncss": "^0.17.2",
 		"vinyl-named": "^1.1.0",
