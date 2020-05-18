@@ -23,10 +23,10 @@ PATHS:
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
-    - "!src/assets/{images,scripts,styles}/**/*"
+    - "!src/assets/{images,javascript,styles}/**/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     # - "node_modules/foundation-sites/scss"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
-    - "src/assets/scripts/app.js"
+    - "src/assets/javascript/app.js"

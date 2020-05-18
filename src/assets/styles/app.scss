@@ -5,15 +5,16 @@
 // Settings
 @import 'settings';
 
-// Abstracts
-@import 'abstracts/mixins';
-@import 'abstracts/placeholders';
+// Helpers
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
 
 // Vendors (path into node_modules)
 
 // Base
-@import 'base/normalize';
-@import 'base/base';
+@import 'global/normalize';
+@import 'global/fonts';
+@import 'global/base';
 
 // Layouts
 @import '../../layouts/default/default';

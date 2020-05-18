@@ -112,8 +112,8 @@ function sass() {
 let webpackConfig = {
 	mode: PRODUCTION ? 'production' : 'development',
 	output: {
-		publicPath: 'theme/assets/scripts/',
-		path: path.resolve(__dirname, 'theme/assets/scripts'),
+		publicPath: 'theme/assets/javascript/',
+		path: path.resolve(__dirname, 'theme/assets/javascript'),
 	},
 	optimization: {
 		splitChunks: {
@@ -174,7 +174,7 @@ function javascript() {
 			)
 		)
 		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-		.pipe(gulp.dest(PATHS.dist + '/assets/scripts'));
+		.pipe(gulp.dest(PATHS.dist + '/assets/javascript'));
 }
 
 // Copy images to the "dist" folder
