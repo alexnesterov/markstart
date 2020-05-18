@@ -14,7 +14,8 @@
 		"jquery": "^3.4.1",
 		"js-cookie": "^2.2.1",
 		"lodash": "^4.17.15",
-		"moment": "^2.24.0"
+		"moment": "^2.24.0",
+		"svg4everybody": "^2.1.9"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.7.4",
@@ -36,6 +37,7 @@
 		"gulp-postcss": "^8.0.0",
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
+		"gulp-svg-sprite": "^1.5.0",
 		"gulp-uglify": "^3.0.2",
 		"js-yaml": "^3.13.1",
 		"panini": "^1.6.3",

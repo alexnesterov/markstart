@@ -30,11 +30,13 @@ function loadConfig() {
 	return yaml.load(ymlFile);
 }
 
+gulp.task('svgSpriteBuild', gulp.series(svgSprite, svgSpriteHTML));
+
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task(
 	'build',
-	gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass)
+	gulp.series(clean, gulp.parallel(pages, javascript, 'svgSpriteBuild', images, copy), sass)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -189,6 +191,38 @@ function images() {
 			)
 		)
 		.pipe(gulp.dest(PATHS.dist + '/assets/images'));
+}
+
+// SVG Sprite Build
+function svgSprite() {
+	return gulp
+		.src('src/assets/images/svg/*.svg') // svg files for sprite
+		.pipe(
+			$.svgSprite({
+				mode: {
+					symbol: {
+						sprite: '../sprite.svg', //sprite file name
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest(PATHS.dist + '/assets/images/'));
+}
+
+// SVG Sprite Build HTML
+function svgSpriteHTML() {
+	return gulp
+		.src('src/assets/images/svg/*.svg') // svg files for sprite
+		.pipe(
+			$.svgSprite({
+				mode: {
+					symbol: {
+						sprite: '../sprite-bundle.html', //sprite file name
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest('src/components/core/sprite/'));
 }
 
 // Start a server with BrowserSync to preview the site in
