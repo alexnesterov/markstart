@@ -4,8 +4,8 @@
 	"description": "Surjed based on ZURB WebApp Template.",
 	"main": "gulpfile.babel.js",
 	"scripts": {
-		"dev": "gulp",
-		"build": "gulp build --production",
+		"dev": "yarn && gulp",
+		"build": "yarn && gulp build --production",
 		"pretty": "prettier --write \"src/**/*.{js,json,md,scss}\""
 	},
 	"author": "Alex Nesterov",
