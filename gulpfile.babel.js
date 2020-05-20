@@ -260,7 +260,7 @@ function watch() {
 	);
 	gulp.watch('src/assets/styles/**/*.scss').on('all', sass);
 	gulp.watch('src/{layouts,components}/**/*.scss').on('all', sass);
-	gulp.watch('src/assets/scripts/**/*.js').on(
+	gulp.watch(['src/assets/scripts/**/*.js', 'src/components/**/*.js']).on(
 		'all',
 		gulp.series(javascript, reload)
 	);
