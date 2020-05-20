@@ -1,44 +1,40 @@
-# Surjed Frontend Template
-Based on [ZURB WebApp Template](https://github.com/zurb/foundation-zurb-template)
+# JetPort Frontend
 
-Features:
+## Установка
 
-- Handlebars HTML templates with Panini
-- Sass compilation and prefixing
-- JavaScript module bundling with webpack
-- Built-in BrowserSync server
-- For production builds:
-  - CSS compression
-  - JavaScript module bundling with webpack
-  - Image compression
-
-## Installation
-
-To use this template, your computer needs:
-
-- [NodeJS](https://nodejs.org/en/) (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0)
+- [NodeJS](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 - [Git](https://git-scm.com/)
 
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/alexnesterov/surjed projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
+### Установка зависимостей
 
 ```bash
 cd projectname
 yarn
 ```
 
-Finally, run `yarn start` to run Gulp. Your finished site will be created in a folder called `public`, viewable at this URL:
+### Дев и прод сборка проекта
+
+Команда `yarn dev` запускает сборку для разработки.
+
+Сайт собирается в папку `public` и доступен по URL:
 
 ```
 http://localhost:8000
 ```
 
-To create compressed, production-ready assets, run `yarn run build`.
+Команда `yarn build` запускает продакшн сборку сайта.
+
+### SVG спрайт
+
+Команда `yarn sprite` собирает svg из папки `src/assets/images/svg/` в спрайт `theme/assets/images/sprite.svg`
+
+Чтобы обратиться к нужной иконке из спрайта необходимо прописать `id` иконки, например `#icon_name`, который соответствует имени файла в папке `sprite`.
+
+	<svg>
+		<use xlink:href="#icon_name"></use>
+	</svg>
+
+### Форматирование кода
+
+Команда `yarn pretty` форматирует html, scss и js файлы исходников
