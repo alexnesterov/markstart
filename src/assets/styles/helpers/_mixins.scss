@@ -1,3 +1,28 @@
+// Media
+@mixin bp576 {
+	@media (max-width: 576px) {
+		@content;
+	}
+}
+
+@mixin bp992 {
+	@media (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin bp1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin bp1440 {
+	@media (max-width: 1440px) {
+		@content;
+	}
+}
+
 // Color placeholders
 @mixin placeholder($color: #000) {
 	&::-webkit-input-placeholder {
@@ -14,31 +39,27 @@
 	}
 }
 
-// Media
-@mixin media($name) {
-	@if ($name == phone) {
-		@media (max-width: $breakpoint_phone) {
-			@content;
-		}
-	}
-	@if ($name == mobile) {
-		@media (max-width: $breakpoint_mobile) {
-			@content;
-		}
-	}
-	@if ($name == tablet) {
-		@media (max-width: $breakpoint_tablet) {
-			@content;
-		}
-	}
-	@if ($name == desktop) {
-		@media (max-width: $breakpoint_desktop) {
-			@content;
-		}
-	}
-	@if ($name == wide) {
-		@media (min-width: $breakpoint_wide) {
-			@content;
-		}
+// GPU
+@mixin gpu($change: transform) {
+	transform: translateZ(0);
+	will-change: $change;
+}
+
+// Object-fit
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null) {
+	-o-object-fit: $fit;
+	object-fit: $fit;
+	@if $position {
+		-o-object-position: $position;
+		object-position: $position;
+		font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+	} @else {
+		font-family: 'object-fit: #{$fit}';
 	}
 }

@@ -12,6 +12,10 @@ $window.on('load', function () {
 	svg4everybody();
 });
 
+$window.on('load resize', function() {
+	windowWidth = $window.width();
+});
+
 $window.on('scroll', function() {
 	windowScroll = $window.scrollTop();
 	if (windowScroll > 40) {
