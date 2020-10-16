@@ -1,10 +1,10 @@
 {
-	"name": "surjed",
+	"name": "markstart",
 	"version": "1.0.0",
-	"description": "Surjed based on ZURB WebApp Template.",
+	"description": "MarkStart based on ZURB WebApp Template.",
 	"main": "gulpfile.babel.js",
 	"scripts": {
-		"dev": "yarn && gulp",
+		"start": "yarn && gulp",
 		"build": "yarn && gulp build --production",
 		"sprite": "gulp svgSpriteBuild",
 		"pretty": "prettier --write \"src/**/*.{js,json,md,scss}\""
@@ -55,10 +55,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexnesterov/surjed.git"
+		"url": "https://github.com/alexnesterov/markstart.git"
 	},
 	"bugs": {
-		"url": "https://github.com/alexnesterov/surjed/issues"
+		"url": "https://github.com/alexnesterov/markstart/issues"
 	},
 	"private": true
 }
