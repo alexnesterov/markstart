@@ -1,4 +1,6 @@
 .header {
+	$that: &;
+
 	&__inner {
 		@extend %container;
 		position: relative;

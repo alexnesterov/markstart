@@ -1,4 +1,6 @@
 .footer {
+	$that: &;
+
 	&__inner {
 		@extend %container;
 	}
