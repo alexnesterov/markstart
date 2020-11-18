@@ -63,3 +63,11 @@
 		font-family: 'object-fit: #{$fit}';
 	}
 }
+
+// Yandex Map filter
+@mixin ymaps-filter {
+	.ymaps-2-1-77-ground-pane {
+		position: relative;
+		@content;
+	}
+}
