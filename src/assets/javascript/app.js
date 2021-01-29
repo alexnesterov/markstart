@@ -6,4 +6,14 @@ import './global/base';
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-console.log('Ready!');
+
+let loading = () => {
+	import(/* webpackChunkName: "components" */ './components').then(() => {
+		console.log('Ready!');
+	});
+}
+
+if (window.addEventListener)
+	window.addEventListener('load', loading, false);
+else if (window.attachEvent) window.attachEvent('onload', loading);
+else window.onload = loading;
