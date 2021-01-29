@@ -114,15 +114,16 @@ function sass() {
 let webpackConfig = {
 	mode: PRODUCTION ? 'production' : 'development',
 	output: {
-		publicPath: 'theme/assets/javascript/',
+		publicPath: '/theme/assets/javascript/',
 		path: path.resolve(__dirname, 'theme/assets/javascript'),
+		chunkFilename: '[name].[contenthash].js',
 	},
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
 					test: /[\\/]node_modules[\\/](jquery|js-cookie|lodash)[\\/]/,
-					name: 'vendor',
+					filename: 'vendor.js',
 					chunks: 'all',
 				},
 			},
@@ -146,6 +147,7 @@ let webpackConfig = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env'],
+						plugins: ['@babel/plugin-syntax-dynamic-import'],
 						compact: false,
 					},
 				},
