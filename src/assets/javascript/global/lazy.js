@@ -8,6 +8,7 @@ lazySizes.cfg.preloadClass = '_preload';
 lazySizes.cfg.loadingClass = '_is-loading';
 lazySizes.cfg.loadedClass = '_is-loaded';
 lazySizes.cfg.expand = 1000;
+lazySizes.cfg.expFactor = 2;
 lazySizes.cfg.throttleDelay = 200;
 lazySizes.cfg.customMedia = {
 	'mobile': '(max-width: 576px)',
