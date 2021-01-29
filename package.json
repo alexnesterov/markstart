@@ -4,19 +4,19 @@
 	"description": "MarkStart based on ZURB WebApp Template.",
 	"main": "gulpfile.babel.js",
 	"scripts": {
-		"start": "yarn && gulp",
+		"dev": "yarn && gulp",
 		"build": "yarn && gulp build --production",
+		"prod": "yarn && gulp build --production",
 		"sprite": "gulp svgSpriteBuild",
 		"pretty": "prettier --write \"src/**/*.{js,json,md,scss}\""
 	},
 	"author": "Alex Nesterov",
 	"license": "MIT",
 	"dependencies": {
-		"intersection-observer": "^0.10.0",
 		"jquery": "^3.4.1",
 		"js-cookie": "^2.2.1",
+		"lazysizes": "^5.3.0",
 		"lodash": "^4.17.15",
-		"lozad": "^1.14.0",
 		"moment": "^2.24.0",
 		"object-fit-images": "^3.2.4",
 		"svg4everybody": "^2.1.9"
