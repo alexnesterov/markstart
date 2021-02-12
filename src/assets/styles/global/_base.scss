@@ -69,3 +69,19 @@ textarea {
 	-webkit-appearance: none;
 	border-radius: 0;
 }
+
+.display_none {
+	display: none !important;
+}
+
+@include bp1024 {
+	.display_desktop {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1025px) {
+	.display_mobile {
+		display: none !important;
+	}
+}
