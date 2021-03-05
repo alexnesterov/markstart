@@ -6,7 +6,7 @@
 }
 
 @mixin bp992 {
-	@media (max-width: 992px) {
+	@media (max-width: 1024px) {
 		@content;
 	}
 }
