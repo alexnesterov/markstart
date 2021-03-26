@@ -9,8 +9,8 @@ html {
 *:after {
 	box-sizing: inherit;
 	// Fix some resize in flexbox elements
-	// min-width: 0;
-	// min-height: 0;
+	min-width: 0;
+	min-height: 0;
 }
 
 *,
@@ -22,12 +22,12 @@ html {
 ::selection {
 	color: white;
 	// Fix Chrome selection
-	background: rgba($brand_primary, 0.99);
+	background: rgba($color_primary, 0.99);
 }
 
 ::-moz-selection {
 	color: white;
-	background: $brand_primary;
+	background: $color_primary;
 }
 
 *:focus {
@@ -35,28 +35,72 @@ html {
 }
 
 body {
-	font-family: $page_font;
-	font-size: $page_font-size;
-	font-weight: $page_font-weight;
-	line-height: $page_line-height;
-	background: $page_background;
-	color: $page_color;
-	@if ($page_font-antialiased) {
-		-webkit-font-smoothing: antialiased;
-	}
+	color: $color_body;
+	font-family: $font_body;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	background: $white;
+	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 }
 
 // Links
 a {
-	color: $link_color;
-	text-decoration: $link_decoration;
+	color: $color_primary;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	transition: color 0.25s ease;
 
 	&:hover {
-		color: $link_hover-color;
-		text-decoration: $link_hover-decoration;
+		color: dark($color_primary, 0.15);
 	}
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ol,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
 }
 
 img {
@@ -74,14 +118,18 @@ textarea {
 	display: none !important;
 }
 
-@include bp1024 {
+@include tablet {
 	.display_desktop {
 		display: none !important;
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	.display_mobile {
 		display: none !important;
 	}
+}
+
+.preload * {
+	transition: none !important;
 }

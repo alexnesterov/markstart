@@ -1,24 +1,24 @@
 // Media
-@mixin bp576 {
-	@media (max-width: 576px) {
+@mixin phone {
+	@media (max-width: 639px) {
 		@content;
 	}
 }
 
-@mixin bp992 {
-	@media (max-width: 1024px) {
+@mixin tablet {
+	@media (max-width: 1023px) {
 		@content;
 	}
 }
 
-@mixin bp1200 {
-	@media (max-width: 1200px) {
+@mixin laptop {
+	@media (max-width: 1279px) {
 		@content;
 	}
 }
 
-@mixin bp1440 {
-	@media (max-width: 1440px) {
+@mixin desktop {
+	@media (max-width: 1535px) {
 		@content;
 	}
 }
@@ -37,6 +37,15 @@
 	&:-moz-placeholder {
 		color: $color;
 	}
+}
+
+// Visually hidden
+@mixin visually-hidden() {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
 }
 
 // GPU
@@ -66,8 +75,34 @@
 
 // Yandex Map filter
 @mixin ymaps-filter {
-	.ymaps-2-1-77-ground-pane {
+	[class*='-ground-pane'] {
 		position: relative;
 		@content;
 	}
+}
+
+// Flex center (to parent)
+@mixin flex-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin lazy-loaded {
+	opacity: 0;
+	transition: opacity 0.45s ease-in-out;
+
+	&._is-loaded {
+		opacity: 1;
+	}
+}
+
+// Full-widht container
+@mixin full-width() {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
 }

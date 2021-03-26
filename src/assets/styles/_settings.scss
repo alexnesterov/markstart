@@ -1,45 +1,20 @@
-// Path image
-$path_image: '../images/';
-
 // Colors
 $white: #fff;
-$gray: #464a4c;
 $black: #000;
+$gray: #464a4c;
 
-$brand_primary: #cc4b37;
-$brand_secondary: #767676;
-$brand_body: #fff;
-$brand_text: #2b303b;
+$color_primary: #cc4b37;
+$color_secondary: #767676;
 
-// Uncomment, if needed
-// $brand_info:            #5bc0de;
-// $brand_success:         #5cb85c;
-// $brand_warning:         #ffae00;
-// $brand_danger:          #cc4b37;
+$color_light: #f8f9fa;
+$color_dark: #212529;
+
+$color_body: $color_dark;
 
 // Fonts
-$font_primary: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont,
-	'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif,
-	'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-$font_secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+$font_body: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
 	'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
 	'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-// Page
-$page_background: $white;
-$page_color: $brand_text;
-$page_font: $font_primary;
-$page_font-size: 16px;
-$page_line-height: 1.6;
-$page_font-weight: 400;
-$page_font-antialiased: false;
-
-// Links
-$link_color: $brand_primary;
-$link_decoration: none;
-$link_hover-color: darken($brand_primary, 15%);
-$link_hover-decoration: none;
-
-// Grid
-$grid_container: 1172px;
-$grid_gutter: 32px;
+$font_display: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+	'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+	'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
