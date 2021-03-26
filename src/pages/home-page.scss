@@ -1,0 +1,9 @@
+.home-page {
+	$that: &;
+
+	padding: 60px 0;
+
+	&__container {
+		@extend %container;
+	}
+}

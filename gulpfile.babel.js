@@ -36,7 +36,11 @@ gulp.task('svgSpriteBuild', gulp.series(svgSprite, svgSpriteHTML));
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task(
 	'build',
-	gulp.series(clean, gulp.parallel(pages, javascript, 'svgSpriteBuild', images, copy), sass)
+	gulp.series(
+		clean,
+		gulp.parallel(pages, javascript, 'svgSpriteBuild', images, copy),
+		sass
+	)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -261,7 +265,7 @@ function watch() {
 		gulp.series(resetPages, pages, reload)
 	);
 	gulp.watch('src/assets/styles/**/*.scss').on('all', sass);
-	gulp.watch('src/{layouts,components}/**/*.scss').on('all', sass);
+	gulp.watch('src/{layouts,pages,components}/**/*.scss').on('all', sass);
 	gulp.watch(['src/assets/javascript/**/*.js', 'src/components/**/*.js']).on(
 		'all',
 		gulp.series(javascript, reload)
