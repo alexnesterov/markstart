@@ -100,18 +100,28 @@ iframe,
 embed,
 object {
 	display: block;
-	vertical-align: middle;
 }
 
 img {
 	max-width: 100%;
+	height: auto;
 }
 
 input[type='text'],
+input[type='email'],
+input[type='tel'],
 input[type='submit'],
+input[type='search'],
 textarea {
 	-webkit-appearance: none;
 	border-radius: 0;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
 }
 
 .display_none {
