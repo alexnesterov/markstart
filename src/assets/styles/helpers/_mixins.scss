@@ -1,4 +1,4 @@
-// Media
+// Media (Desktop First)
 @mixin phone {
 	@media (max-width: 639.98px) {
 		@content;
@@ -22,6 +22,25 @@
 		@content;
 	}
 }
+
+// Media (Mobile First)
+// @mixin tablet {
+// 	@media (min-width: 640px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin laptop {
+// 	@media (min-width: 1024px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin desktop {
+// 	@media (min-width: 1280px) {
+// 		@content;
+// 	}
+// }
 
 // Color placeholders
 @mixin placeholder($color: #000) {
