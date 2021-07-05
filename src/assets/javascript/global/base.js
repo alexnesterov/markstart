@@ -1,5 +1,4 @@
 import 'core-js';
-import svg4everybody from 'svg4everybody';
 
 window.$window = $(window);
 window.$document = $(document);
@@ -10,14 +9,13 @@ window.windowLastScroll = 0;
 
 $window.on('load', function () {
 	$body.addClass('page_loaded');
-	svg4everybody();
 });
 
-$window.on('load resize', function() {
+$window.on('load resize', function () {
 	windowWidth = $window.width();
 });
 
-$window.on('scroll', function() {
+$window.on('scroll', function () {
 	windowScroll = $window.scrollTop();
 	if (windowScroll > 40) {
 		$body.addClass('page_scrolled');
